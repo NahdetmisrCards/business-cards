@@ -1,5 +1,5 @@
 	var employee_id = 0
-	var baseUrl="https://apisnmg-staging.azurewebsites.net/eduhub/Files/businesscardgit/";//"https://apisnmg-staging.azurewebsites.net/eduhub/Files/Businesscard/";//"https://raw.githack.com/nahdetmisrApp/bussiness-cards-nahdetmisr/main/";
+	var baseUrl="https://nahdetmisrapp.github.io/bussiness-cards-nahdetmisr/";//"https://apisnmg-staging.azurewebsites.net/eduhub/Files/Businesscard/";//"https://raw.githack.com/nahdetmisrApp/bussiness-cards-nahdetmisr/main/";
 	function readCSV() {
 		var xmlhttp = new XMLHttpRequest();
 		  xmlhttp.open("GET", baseUrl+"data/Business%20Cards.csv", false); // `false` makes the request synchronous
