@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 body {
   font-family: Roboto, sans-serif;
-  margin: 0;
-  height: 100vh;
+ 
+background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+}
+.centerlized {
+  
+  margin: auto;
+  width: 50%;
   display: grid;
   align-items: center;
   justify-items: center;
-background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
-}
 
+}
 .footer{
 	text-align: center
 }
-
+#card_number_barcode
+{
+	max-width:120px!important;
+}
 .card {
   background: #fff;
   border-radius: 4px;
