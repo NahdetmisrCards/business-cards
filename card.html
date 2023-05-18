@@ -39,10 +39,13 @@
 		  
 		  // employee_number Starts with 1. Set according to employee data row number in data/Bussiness Cards.csv. Recieved as a parameter
 		  // employee_number = 2
+		  var employee_number =1;
 		  var url = new URL(window.location.href);
-		  var employee_number = url.searchParams.get("employee_number");
-		  if(employee_number==null)
-		  employee_number=1;
+		  
+		  url.searchParams.get("employee_number");
+		  if(url.searchParams.get("employee_number")!=null)
+		  employee_number=url.searchParams.get("employee_number");
+		  
 		  var data = lines[employee_number-1].split(";");
 		
 		  document.getElementById("photo").setAttribute("src", "photos/" + employee_number + ".jpg");
