@@ -27,10 +27,10 @@
 	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script type="text/javascript">
 	var employee_id = 0
-	
+	var baseUrl="https://raw.githack.com/nahdetmisrApp/bussiness-cards-nahdetmisr/main/";
 	function readCSV() {
 		var xmlhttp = new XMLHttpRequest();
-		  xmlhttp.open("GET", "https://raw.githubusercontent.com/heshameraqi/bussiness-cards-nahdetmisr/main/data/Business%20Cards.csv", false); // `false` makes the request synchronous
+		  xmlhttp.open("GET", baseUrl+"data/Business%20Cards.csv", false); // `false` makes the request synchronous
 		  xmlhttp.send();
 		  if (xmlhttp.status==200) {
 			result = xmlhttp.responseText;
@@ -41,7 +41,8 @@
 		  // employee_number = 2
 		  var url = new URL(window.location.href);
 		  var employee_number = url.searchParams.get("employee_number");
-		  
+		  if(employee_number==null)
+		  employee_number=1;
 		  var data = lines[employee_number-1].split(";");
 		
 		  document.getElementById("photo").setAttribute("src", "photos/" + employee_number + ".jpg");
@@ -66,7 +67,7 @@
 		  //document.getElementById("card").appendChild(welcomeTextNode);
 		  
 		  document.getElementById("vcard_number").setAttribute("href", "vcards/" + employee_number + "-vcard.vcf");
-		  document.getElementById("card_number_barcode").setAttribute("src", "https://api.qrserver.com/v1/create-qr-code/?data=https://raw.githack.com/nahdetmisrApp/bussiness-cards-nahdetmisr/main/vcards/" + employee_number + "-vcard.vcf&amp;size=100x100");
+		  document.getElementById("card_number_barcode").setAttribute("src", "https://api.qrserver.com/v1/create-qr-code/?data="+ baseUrl+"vcards/"+ employee_number + "-vcard.vcf&amp;size=100x100");
 	}
     </script>
   </head>
@@ -91,7 +92,7 @@
 						<!--====== V Card Generated QR Code ======-->
 						<div class="col-4 pl-0 text-right">
 							<img id='card_number_barcode' 
-								src="https://api.qrserver.com/v1/create-qr-code/?data=https://raw.githack.com/nahdetmisrApp/bussiness-cards-nahdetmisr/main/vcards/1-vcard.vcf&amp;size=100x100" 
+								src="" 
 								alt="" 
 								title="Digital Card" 
 								width="120" 
