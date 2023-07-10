@@ -15,8 +15,8 @@
 		  var url = new URL(window.location.href);
 		  
 		  //url.searchParams.get("employee_number");
-		 // if(url.searchParams.get("employee_number")!=null)
-		 // employee_number=url.searchParams.get("employee_number");
+		  if(url.searchParams.get("employee_number")!=null)
+		  employee_number=url.searchParams.get("employee_number");
 		  
 		  var data = lines[employee_number-1].split(";");
 		
