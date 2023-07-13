@@ -26,7 +26,16 @@
 	      document.getElementById("phone").innerHTML = data[3];
 	      document.getElementById("email").innerHTML = data[1];
 		  document.getElementById("address").innerHTML = data[5];
-		  
+		  if(data.length>6)
+		  {
+			  
+		  document.getElementById("addressDetails1").innerHTML = data[6];
+		  document.getElementById("addressDetails2").innerHTML = data[7];
+		  }
+		  else
+		  {
+			 document.getElementsByClassName("addressDetails").Style.display="none";
+		  }
 		  <!--====== Adding LinkedIn Badge ======-->
 		  var div = document.createElement("div");
 		  div.className = "badge-base LI-profile-badge";
