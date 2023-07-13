@@ -25,6 +25,7 @@
 	      document.getElementById("title_company").innerHTML = data[2];
 	      document.getElementById("phone").innerHTML = data[3];
 	      document.getElementById("email").innerHTML = data[1];
+		  document.getElementById("address").innerHTML = data[5];
 		  
 		  <!--====== Adding LinkedIn Badge ======-->
 		  var div = document.createElement("div");
