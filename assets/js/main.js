@@ -34,7 +34,7 @@
 		  }
 		  else
 		  {
-			 document.getElementsByClassName("addressDetails").Style.display="none";
+			 document.getElementsByClassName("addressDetails").Style.setAttribute("display", "none");
 		  }
 		  <!--====== Adding LinkedIn Badge ======-->
 		  var div = document.createElement("div");
